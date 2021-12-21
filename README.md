@@ -1,10 +1,11 @@
 # ytd : A daemon for backgroud playback of yt-dlp
-`ytd` is a server that can be used to play the audio of videos hosted on services supported by `yt-dlp`.
+`ytd` is a server that can be used to play the audio of videos hosted on services supported by [`yt-dlp`](https://github.com/yt-dlp/yt-dlp).
 
 ## Dependencies
 - Qt Core
 - Qt Multimedia
 - Qt WebSocket
+- [`yt-dlp`](https://github.com/yt-dlp/yt-dlp)
 - `qmake` (build time)
 
 ## How to build
