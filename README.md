@@ -1,4 +1,4 @@
-# ytd : A daemon for backgroud playback of yt-dl
+# ytd : A daemon for backgroud playback of yt-dlp
 `ytd` is a server that can be used to play the audio of videos hosted on services supported by `yt-dlp`.
 
 ## Dependencies
