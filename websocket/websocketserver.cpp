@@ -80,6 +80,8 @@ void WebSocketServer::onTextMessage(QString message) {
             player->pause();
         } else if (args[0] == "next") { // Next media
             player->next();
+        } else if (args[0] == "prev") { // Previous media
+            player->previous();
         } else if(args[0] == "stop") { // Stop playback
             player->stop();
         } else if(args[0] == "load" && args.length() == 2) { // Load from queue

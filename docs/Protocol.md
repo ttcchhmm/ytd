@@ -58,6 +58,13 @@ Arguments : *none*
 
 Skips to the next media.
 
+### Load the previous media
+Command : `prev`
+
+Arguments : *none*
+
+Loads the previous media on the queue if possible.
+
 ### Load a media from the queue
 Command : `load`
 

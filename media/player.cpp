@@ -86,6 +86,14 @@ void Player::next() {
     }
 }
 
+void Player::previous() {
+    if(loadIndex(current-1)) {
+        play();
+    } else {
+        emit stateUpdated();
+    }
+}
+
 int Player::getVolume() {
     return qtPlayer->volume();
 }
@@ -98,7 +106,7 @@ void Player::setVolume(unsigned int value) {
     }
 }
 
-bool Player::loadIndex(int index) {
+bool Player::loadIndex(unsigned int index) {
     if(index < queue.length()) {
         Media m = queue[index];
         QString dlPath = CacheManager::getCachedPath(m);

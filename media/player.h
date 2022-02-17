@@ -38,15 +38,20 @@ class Player : public QObject {
         void next();
 
         /**
+         * Loads previous media.
+         */
+        void previous();
+
+        /**
          * Load the media from the queue specified by the index.
          * Does not play it just after.
          * 
          * Args :
-         * - int index : the index in the queue
+         * - unsigned int index : the index in the queue
          * 
          * Return : true if the media has been loaded, false otherwise
          */
-        bool loadIndex(int index);
+        bool loadIndex(unsigned int index);
 
         /**
          * Sets the player position.
