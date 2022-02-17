@@ -46,12 +46,15 @@ void Player::addToQueue(Media m) {
     emit stateUpdated();
 }
 
-void Player::deleteFromQueue(int index) {
+void Player::deleteFromQueue(int index) {  
+    queue.remove(index);
+
     if(current == index) {
         next();
+    } else if (current >= queue.length()) {
+        stop();
+        return; // Avoid sending two updates in a row
     }
-    
-    queue.remove(index);
 
     emit stateUpdated();
 }
