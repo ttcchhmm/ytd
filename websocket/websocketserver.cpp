@@ -89,7 +89,11 @@ void WebSocketServer::onTextMessage(QString message) {
         } else if(args[0] == "reset") { // Empty the queue
             player->emptyQueue();
         } else if(args[0] == "remove" && args.length() == 2) { // Remove from queue
-            player->deleteFromQueue(args[1].toInt());
+            int index = args[1].toInt();
+            
+            if(index < player->getQueue().length()) {
+                player->deleteFromQueue(index);
+            }
         } else if(args[0] == "position" && args.length() == 2) { // Update the player position
             player->setPosition(args[1].toInt());
         } else if(args[0] == "volume" && args.length() == 2) { // Set the volume
